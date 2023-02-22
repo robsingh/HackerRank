@@ -18,7 +18,7 @@ import os
 import random
 import re
 import sys
-
+from collections import Counter
 #
 # Complete the 'checkMagazine' function below.
 #
@@ -29,21 +29,32 @@ import sys
 
 def checkMagazine(magazine, note):
     # create a dictionary to count the frequency of each word in the magazine
-    word_count = {}
-    for word in magazine:
-        if word in word_count:
-            word_count[word] += 1
-        else:
-            word_count[word] = 1
+    # word_count = {}
+    # for word in magazine:
+    #     if word in word_count:
+    #         word_count[word] += 1
+    #     else:
+    #         word_count[word] = 1
 
-    # check whether each word in the note is in the dictionary and has a count greater than zero
+    # # check whether each word in the note is in the dictionary and has a count greater than zero
+    # for word in note:
+    #     if word in word_count and word_count[word] > 0:
+    #         word_count[word] -= 1
+    #     else:
+    #         print("No")
+    #         return
+    # print("Yes")
+
+    # refactored version
+    word_freq = Counter(magazine)
     for word in note:
-        if word in word_count and word_count[word] > 0:
-            word_count[word] -= 1
+        if word_freq[word] > 0:
+            word_freq[word] -= 1
         else:
             print("No")
             return
     print("Yes")
+
 
 
 
