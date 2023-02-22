@@ -46,15 +46,23 @@ def checkMagazine(magazine, note):
     # print("Yes")
 
     # refactored version
+    # word_freq = Counter(magazine)
+    # for word in note:
+    #     if word_freq[word] > 0:
+    #         word_freq[word] -= 1
+    #     else:
+    #         print("No")
+    #         return
+    # print("Yes")
+
+    #another way could be
     word_freq = Counter(magazine)
     for word in note:
-        if word_freq[word] > 0:
-            word_freq[word] -= 1
-        else:
+        if word_freq[word] == 0:      #combined the if condition
             print("No")
             return
+        word_freq[word] -= 1
     print("Yes")
-
 
 
 
