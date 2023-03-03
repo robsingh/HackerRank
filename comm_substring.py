@@ -33,6 +33,14 @@ Approach:
    no common substring. 
 """
 
+"""
+Approach: 
+1. Iterate through each character in the first string.
+2. For each character, check if it appears in the second string. If it does, return "YES" since there is a common substring.
+3. If you iterate through the entire first string and do not find any common characters in the second string, return "NO" since there is
+   no common substring. 
+"""
+
 def twoStrings(s1, s2):
     for char in s1:
         if char in s2:
