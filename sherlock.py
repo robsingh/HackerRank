@@ -9,10 +9,12 @@ The first line contains an integer , the number of queries.
 Each of the next  lines contains a string  to analyze."""
 
 #!/bin/python3
+
 # Complete the 'sherlockAndAnagrams' function below.
 #
 # The function is expected to return an INTEGER.
 # The function accepts STRING s as parameter.
+
 
 def sherlockAndAnagrams(s:str) -> int:
     """
@@ -22,20 +24,32 @@ def sherlockAndAnagrams(s:str) -> int:
     Returns:
         int: the number of pairs of anagram substrings"""
     
+
+
+def sherlockAndAnagrams(s:str) -> int:
+
     freq = {}
     count = 0
     for i in range(len(s)):
         for j in range(i, len(s)):
+
             # calculate the frequency of characters in the substring 
+
             sub_freq = {}
             for c in s[i:j+1]:
                 sub_freq[c] = sub_freq.get(c,0) + 1
+
 
             # check if any previous substring has the same frequency of characters
             for f in freq:
                 if freq[f] == sub_freq:
                     count += 1
             # add the frequency of this substring to the hash map
+
+            for f in freq:
+                if freq[f] == sub_freq:
+                    count += 1
+
             freq[(i,j)] = sub_freq
     return count
 
@@ -49,5 +63,7 @@ if __name__ == '__main__':
         except EOFError:
             break
 
+
     fptr.close()
+
 
