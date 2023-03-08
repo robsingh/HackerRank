@@ -24,10 +24,6 @@ def sherlockAndAnagrams(s:str) -> int:
     Returns:
         int: the number of pairs of anagram substrings"""
     
-
-
-def sherlockAndAnagrams(s:str) -> int:
-
     freq = {}
     count = 0
     for i in range(len(s)):
