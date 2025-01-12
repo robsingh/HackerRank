@@ -1,4 +1,5 @@
-"""Two strings are anagrams of each other if the letters of one string can be rearranged to form the other string.
+"""
+Two strings are anagrams of each other if the letters of one string can be rearranged to form the other string.
 Given a string, find the number of pairs of substrings of the string that are anagrams of each other.
 
 Returns:
@@ -6,15 +7,8 @@ int: the number of unordered anagrammatic pairs of substrings in
 Input Format
 
 The first line contains an integer , the number of queries.
-Each of the next  lines contains a string  to analyze."""
-
-#!/bin/python3
-
-# Complete the 'sherlockAndAnagrams' function below.
-#
-# The function is expected to return an INTEGER.
-# The function accepts STRING s as parameter.
-
+Each of the next  lines contains a string  to analyze.
+"""
 
 def sherlockAndAnagrams(s:str) -> int:
     freq = {}
@@ -41,6 +35,7 @@ def sherlockAndAnagrams(s:str) -> int:
 
             freq[(i,j)] = sub_freq
     return count
+
 
 if __name__ == '__main__':
     fptr = open("output.txt",'w')
