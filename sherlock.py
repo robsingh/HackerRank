@@ -17,13 +17,6 @@ Each of the next  lines contains a string  to analyze."""
 
 
 def sherlockAndAnagrams(s:str) -> int:
-    """
-    Counts the number of pair of substrings of s that are anagrams of each other.
-    Args:
-        s : str: input string
-    Returns:
-        int: the number of pairs of anagram substrings"""
-    
     freq = {}
     count = 0
     for i in range(len(s)):
